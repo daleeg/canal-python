@@ -1,3 +1,5 @@
 __pycache__
-canal_python.egg-info
+pycanal.egg-info
 dist
+build
+.idea
