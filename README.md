@@ -1,8 +1,8 @@
-# canal-python
+# pycanal
 
-## 一.canal-python 简介
+## 一.pycanal 简介
 
-canal-python 是阿里巴巴开源项目 [Canal](https://github.com/alibaba/canal)是阿里巴巴mysql数据库binlog的增量订阅&消费组件 的 python 客户端。为 python 开发者提供一个更友好的使用 Canal 的方式。Canal 是mysql数据库binlog的增量订阅&消费组件。
+pycanal 是阿里巴巴开源项目 [Canal](https://github.com/alibaba/canal)是阿里巴巴mysql数据库binlog的增量订阅&消费组件 的 python 客户端。为 python 开发者提供一个更友好的使用 Canal 的方式。Canal 是mysql数据库binlog的增量订阅&消费组件。
 
 基于日志增量订阅&消费支持的业务：
 
@@ -17,7 +17,7 @@ canal-python 是阿里巴巴开源项目 [Canal](https://github.com/alibaba/cana
 
 ## 二.应用场景
 
-canal-python 作为Canal的客户端，其应用场景就是Canal的应用场景。关于应用场景在Canal介绍一节已有概述。举一些实际的使用例子：
+pycanal 作为Canal的客户端，其应用场景就是Canal的应用场景。关于应用场景在Canal介绍一节已有概述。举一些实际的使用例子：
 
 1.代替使用轮询数据库方式来监控数据库变更，有效改善轮询耗费数据库资源。
 
@@ -33,23 +33,23 @@ canal-python 作为Canal的客户端，其应用场景就是Canal的应用场景
 
 ## 三.工作原理
 
-canal-python  是 Canal 的 python 客户端，它与 Canal 是采用的Socket来进行通信的，传输协议是TCP，交互协议采用的是 Google Protocol Buffer 3.0。
+pycanal  是 Canal 的 python 客户端，它与 Canal 是采用的Socket来进行通信的，传输协议是TCP，交互协议采用的是 Google Protocol Buffer 3.0。
 
 ## 四.工作流程
 
 1.Canal连接到mysql数据库，模拟slave
 
-2.canal-python 与 Canal 建立连接
+2.pycanal 与 Canal 建立连接
 
 2.数据库发生变更写入到binlog
 
 5.Canal向数据库发送dump请求，获取binlog并解析
 
-4.canal-python 向 Canal 请求数据库变更
+4.pycanal 向 Canal 请求数据库变更
 
-4.Canal 发送解析后的数据给canal-python
+4.Canal 发送解析后的数据给pycanal
 
-5.canal-python收到数据，消费成功，发送回执。（可选）
+5.pycanal收到数据，消费成功，发送回执。（可选）
 
 6.Canal记录消费位置。
 
@@ -65,7 +65,7 @@ python >= 3
 ### 构建canal python客户端
 
 ````shell
-pip install canal-python
+pip install py3canal
 ````
 
 ### 建立与Canal的连接

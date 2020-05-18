@@ -1,5 +1,5 @@
 __pycache__
-pycanal.egg-info
+*.egg-info
 dist
 build
 .idea
